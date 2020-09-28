@@ -1,0 +1,85 @@
+/* CSS RESET */
+*, *::before, *::after {
+	box-sizing: border-box;
+}
+ul[class], ol[class] {
+	padding: 0;
+}
+body, h1, h2, h3, h4, p, ul[class], ol[class], li, figure, figcaption, blockquote, dl, dd {
+	margin: 0;
+}
+body {
+	min-height: 100vh;
+	scroll-behavior: smooth;
+	text-rendering: optimizeSpeed;
+	line-height: 1.5;
+}
+ul[class], ol[class] {
+	list-style: none;
+}
+a:not([class]) {
+	text-decoration-skip-ink: auto;
+}
+img {
+	max-width: 100%;
+	display: block;
+}
+article>*+* {
+	margin-top: 1em;
+}
+input, button, textarea, select {
+	font: inherit;
+}
+
+/* fonts */
+  @font-face {
+    font-family: plantin;
+    src: url(fonts/Plantin.woff);
+  }
+  @font-face {
+    font-family: plantinBoldCondensed;
+    src: url(fonts/PlantinBoldCondensed.woff);
+  }
+
+  /* main styling */
+  .main {
+    max-width: 980px;
+    margin: 0 auto;
+}
+  .header {
+    background-color: #222222;
+}
+  .container {
+      margin: 0 20px;
+      text-align: left;
+  }
+  .plantin {
+    font-family: plantin;
+    font-weight: normal;
+    font-size: 20px;
+    color: #ffffff;
+}
+.plantinBoldCondensed {
+    color: #ce4d4a;
+    font-size: 20px;
+    font-family: plantinBoldCondensed;
+}
+  .title {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+            margin-left: 30px;
+}
+  .mono_logo {
+    padding-right: 15px;
+  }
+  .container {
+    margin: 0 30px;
+    text-align: left;
+}
