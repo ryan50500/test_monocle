@@ -15,10 +15,104 @@
 					<img src="images/logomark.png" class="mono_logo"/>
 					<h1 class="plantin">MONOCLE RECIPES</h1>
 				</div>
-			</div>
+            </div>
+            <div class="bk_holder">
 			<div class="container">
-				<h2 class="plantinBoldCondensed">MONOCLE RECIPES</h2>
-			</div>
+                <div class="veg_img">
+                <img src="images/veg-casserole.jpg" class="veg"/>
+                <p>Vegetarian Casserole</p>
+            </div>
+				<h2 class="plantinBoldCondensed">INGREDIENTS</h2>
+				<ul>
+					<li>1 tbsp olive or rapeseed oil</li>
+					<li>1 onion , finely chopped</li>
+					<li>3 garlic cloves , sliced</li>
+					<li>1 tsp smoked paprika</li>
+					<li>½ tsp cumin</li>
+					<li>1 tbsp dried thyme</li>
+					<li>3 medium carrots , sliced (about 200g)</li>
+					<li>2 medium sticks celery , finely sliced (about 120g)</li>
+					<li>1 red pepper , chopped</li>
+					<li>1 yellow pepper , chopped</li>
+					<li>2 x 400g tins tomatoes or peeled cherry tomatoes</li>
+                    <li>250ml vegetable stock cube (we used </li>
+                    <li>1 Knorr vegetable stock pot)</li>
+					<li>2 courgettes , sliced thickly (about 300g)</li>
+					<li>2 sprigs fresh thyme</li>
+				</ul>
+				<h2 class="plantinBoldCondensed">METHOD</h2>
+				<ol>
+					<li>1. Heat the oil in a large, heavy-based pan.</li>
+					<li>2. Add the onions and cook gently for 5 - 10 mins until softened.</li>
+					<li>3. Add the garlic, spices, dried thyme, carrots, celery and peppers and cook for 5 minutes.</li>
+					<li>4. Add the tomatoes, stock, courgettes and fresh thyme and cook for 20 - 25 minutes.</li>
+					<li>5. Take out the thyme sprigs.</li>
+					<li>6. Stir in the lentils and bring back to a simmer.</li>
+					<li>7. Serve with wild and white basmati rice, mash or quinoa.</li>
+                </ol>
+
+                <!-- form section -->
+                    <div class="form_section">
+                        <p class="form_comment">Comments</p>
+                        <form onsubmit="return validate()" action="action_page.php">
+                            <div class="flex_form">
+                            <p class="fname center">Name:*</p>
+                            <input type="text" id="fname" name="firstname">
+                        </div>
+                        <br>
+                        <div class="flex_form">
+                        <p class="email center">Email:*</p>
+                            <input type="text" id="email" name="email">
+                        </div>
+                        <br>
+                        <div class="flex_form">
+                        <p class="comment center">Comment:*</p>
+                            <textarea id="subject" name="comment"  style="height:200px"></textarea>
+                        </div>
+                        <br>
+                        <input type="submit" value="Submit">
+                        <br>
+                            <!-- <input type="submit" value="Submit"> -->
+                          </form>
+                    </div>
+
+                    <!-- bottom section -->
+                    <div class="para">
+                        <p class="bold">Lorem Name</p>
+                        <p class="medium">lorem@ipsum.com</p>
+                        <p class="main_para">Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec ullamcorper nulla non metus auctor fringilla. Duis mollis, est non commodo luctus, nisi erat porttitor ligula,
+                            eget lacinia odio sem nec elit. Aenean lacinia bibendum nulla sed consectetur.</p>
+                    </div>
+                    <div class="para">
+                        <p class="bold">Lorem Name</p>
+                        <p class="medium">lorem@ipsum.com</p>
+                        <p class="main_para">Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec ullamcorper nulla non metus auctor fringilla. Duis mollis, est non commodo luctus, nisi erat porttitor ligula,
+                            eget lacinia odio sem nec elit. Aenean lacinia bibendum nulla sed consectetur.nec ullamcorper lorem id ante pretium id auctor arcu pretium. Sed viverra mi ut ligula pellentesque ultricies. Morbi feugiat
+                            sagittis lacus in fermentum. Class aptent taciti sociosqu ad litora torq</p>
+                    </div>
+            </div>
+        </div>
 		</div>
-	</body>
+    </body>
+    
+    <!-- form validation -->
+<script>
+function validate() {
+            var name = document.getElementById('fname');
+            var email = document.getElementById('email');
+
+            if (name.value.trim() == "" || email.value.trim() == "") {
+                alert("No blank values allowed");
+                return false;
+            }
+            else if (email.value.indexOf('@') < 1) {
+                alert("Email field must contain @");
+                return false;
+            }
+            else {
+                true;
+            }
+        }
+</script>
+
 </html>
