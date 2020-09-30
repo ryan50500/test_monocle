@@ -119,18 +119,19 @@ input, button, textarea, select {
 
 /* form styling */
 input[type=text], textarea {
-  padding: 12px;
+  height: 42px;
+  width: 240px;
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
   margin-top: 6px;
   resize: vertical;
 }
-#fname, #lname {
-width: 30%;
-}
+/* .wrap_fields {
+  width: 33%;
+} */
 textarea#subject {
-  width: 50%;
+  width: 400px;
 }
 input[type=submit] {
   background-color: #4CAF50;
@@ -149,6 +150,7 @@ input[type=submit]:hover {
 /* form styling */
 .form_section {
   padding-top: 20px;
+  overflow: hidden;
 }
 .center {
   width: 85px;
@@ -217,6 +219,25 @@ input[type=submit] {
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
 }
+p.error {
+  position: relative;
+  top: 6px;
+  color: red;
+  font-family: HelveticaNeueRoman;
+  display : none;
+}
+.thank_you {
+  display: none;
+  background: linear-gradient(#31a34f, #98e698);
+  color: #ffffff !important;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+  margin-top: 20px;
+}
+.comment_error {
+  display: none;
+}
 
 
 /* ipad landscape and above */
@@ -243,11 +264,8 @@ input[type=submit] {
 input[type=submit] {
   margin-left: 110px;
 }
-#fname, #email {
-  width: 60%;
-}
 textarea#subject {
-  width: 60%;
+  width: 100%;
 }
 .veg_img {
   position: relative;
@@ -256,6 +274,12 @@ textarea#subject {
   top: 25px;
 }
 img.veg {
+  width: 100%;
+}
+input[type=text], textarea {
+  width: 100%;
+}
+.wrap_fields {
   width: 100%;
 }
 }
