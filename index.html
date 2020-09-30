@@ -53,7 +53,7 @@
                     <!-- form section -->
                     <div class="form_section">
                         <p class="form_comment">Comments</p>
-                        <form onsubmit="return validate()" id="myForm" action="action_page.php">
+                        <form onsubmit="return validate()" id="myForm" method="post" action="action_page.php">
                             <div class="flex_form">
                                 <p class="fname center">Name:*</p>
                                 <div class="wrap_fields">
@@ -149,7 +149,6 @@ function validate() {
                     setTimeout(function(){
                         $('.thank_you').slideUp('slow');
                     }, 4000 );
-                    return false;
             }
         }
 
