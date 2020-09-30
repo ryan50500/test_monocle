@@ -116,26 +116,28 @@ function validate() {
             var email = document.getElementById('email');
             var subject = document.getElementById('subject');
 
+    
             if (name.value.trim() == "") {
                 $('.name_error').css('display', 'block');
                 name.style.border = "2px solid red";
-                return false;
+                $('.name_error').text('Please enter your name');
             }
             if (email.value.indexOf('@') < 1) {
                 $('.email_error').css('display', 'block');
                 email.style.border = "2px solid red";
-                return false;
+                $('.email_error').text('Please enter a valid email address');
             }
             if (subject.value.trim() == "") {
                 $('.comment_error').css('display', 'block');
                 subject.style.border = "2px solid red";
                 $('.comment_error').text('Please leave a comment');
-                return false;
             }
             else if (subject.value.length < 5 ) {
                 $('.comment_error').css('display', 'block');
                 $('.comment_error').text('Comment must be at least 5 characters');
                 subject.style.border = "2px solid red";
+            }
+            if (  subject.value.trim() == "" || email.value.indexOf('@') < 1 || name.value.trim() == "" )  {
                 return false;
             }
             else {
