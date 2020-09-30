@@ -10,6 +10,7 @@
 	</head>
 	<body>
         <div class="main">
+            <iframe name="dummyframe" id="dummyframe" style="display: none;"></iframe>
             <div class="header">
                 <div class="title">
                     <img src="images/logomark.png" class="mono_logo" />
@@ -53,7 +54,7 @@
                     <!-- form section -->
                     <div class="form_section">
                         <p class="form_comment">Comments</p>
-                        <form onsubmit="return validate()" id="myForm" method="post" action="action_page.php">
+                        <form onsubmit="return validate()" target="dummyframe" id="myForm" method="post" action="action_page.php">
                             <div class="flex_form">
                                 <p class="fname center">Name:*</p>
                                 <div class="wrap_fields">
