@@ -116,7 +116,6 @@ function validate() {
             var email = document.getElementById('email');
             var subject = document.getElementById('subject');
 
-    
             if (name.value.trim() == "") {
                 $('.name_error').css('display', 'block');
                 name.style.border = "2px solid red";
@@ -150,6 +149,7 @@ function validate() {
                     setTimeout(function(){
                         $('.thank_you').slideUp('slow');
                     }, 4000 );
+                    return false;
             }
         }
 
